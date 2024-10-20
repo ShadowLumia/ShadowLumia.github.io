@@ -2,13 +2,13 @@ body {
     font-family: 'Verdana', sans-serif;
     margin: 0;
     padding: 0;
-    background: #202020; /* Dark background */
-    color: #f0f0f0; /* Light text */
+    background: #202020;
+    color: #f0f0f0;
 }
 
 header {
-    background: #151515; /* Darker black */
-    color: #f0f0f0; /* Light text */
+    background: #151515;
+    color: #f0f0f0;
     padding: 30px 0;
     text-align: center;
     font-size: 24px;
@@ -21,7 +21,7 @@ header {
 }
 
 nav {
-    background: #272727; /* Dark grey */
+    background: #272727;
     width: 100%;
     padding: 20px;
     border-radius: 8px;
@@ -39,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #e74c3c; /* Red links */
+    color: #e74c3c;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -57,10 +57,11 @@ main {
 }
 
 .project-container {
-    width: calc(50% - 30px); /* Three columns layout */
-    margin: 20px 10px; /* Adjust margins for uniform spacing */
+    width: calc(50% - 30px);
+    margin: 20px 10px;
     display: flex;
-    flex-direction: column; /* Ensure all content is stacked properly */
+    flex-direction: column;
+    flex: 1; /* Make project-container flexible */
 }
 
 .project {
@@ -69,19 +70,17 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     padding: 20px;
-    height: auto; /* Allow the height to adjust based on content */
-    flex: 1; /* Ensure flexible height */
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe, .video-wrapper img {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,20 +113,35 @@ main {
 
 .description {
     padding: 10px;
-    height: auto; /* Ensure text fits */
-}
-
-.description p {
-    margin: 0;
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    background: #151515; /* Darker black */
-    color: #f0f0f0; /* Light text */
+    background: #151515;
+    color: #f0f0f0;
     margin-top: 40px;
     position: relative;
     width: 100%;
     border-radius: 8px 8px 0 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .project-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
