@@ -1,4 +1,3 @@
-/* Existing styles */
 body {
     font-family: 'Verdana', sans-serif;
     margin: 0;
@@ -16,14 +15,14 @@ header {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 nav {
     background: #272727; /* Dark grey */
-    width: 220px;
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
 }
@@ -31,10 +30,12 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 15px 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -47,32 +48,77 @@ nav ul li a {
 main {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 20px;
 }
 
-section {
-    margin-bottom: 40px;
-    background: #292929; /* Slightly lighter background */
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    padding: 20px;
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-h1, h2, h3 {
-    color: #e74c3c; /* Red headers */
+.project-container {
+    width: calc(50% - 30px); /* Three columns layout */
+    margin: 20px 10px; /* Adjust margins for uniform spacing */
+    display: flex;
+    flex-direction: column; /* Ensure all content is stacked properly */
 }
 
 .project {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+    height: auto; /* Allow the height to adjust based on content */
+    flex: 1; /* Ensure flexible height */
+}
+
+.video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    margin-bottom: 40px; /* Added margin to separate from the next section */
+    margin-bottom: 20px;
 }
 
-a {
-    color: #e74c3c; /* Red links */
-    text-decoration: none;
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content-wrapper {
+    padding-top: 20px;
+}
+
+.project-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.tags {
+    text-align: center;
+    padding: 10px;
+}
+
+.tags span {
+    background-color: #555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.description {
+    padding: 10px;
+    height: auto; /* Ensure text fits */
+}
+
+.description p {
+    margin: 0;
 }
 
 footer {
@@ -84,40 +130,4 @@ footer {
     position: relative;
     width: 100%;
     border-radius: 8px 8px 0 0;
-}
-
-/* Media Query for mobile devices */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack elements vertically on small screens */
-    }
-
-    nav {
-        margin-left: 0;
-    }
-
-    main {
-        margin-left: 0;
-    }
-
-    iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9; /* Maintain a 16:9 aspect ratio */
-    max-width: 100%;
-    border: none;
-	}
-.project iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.project iframe {
-    width: 100%;
-    height: auto;
-}
-
 }
