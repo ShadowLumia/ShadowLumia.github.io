@@ -51,7 +51,7 @@ main {
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     background: #292929; /* Slightly lighter background */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
@@ -67,6 +67,7 @@ h1, h2, h3 {
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
+    margin-bottom: 40px; /* Added margin to separate from the next section */
 }
 
 a {
