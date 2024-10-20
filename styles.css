@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     font-family: 'Verdana', sans-serif;
     margin: 0;
@@ -16,6 +17,7 @@ header {
 
 .container {
     display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
     padding: 20px;
 }
 
@@ -78,4 +80,24 @@ footer {
     position: relative;
     width: 100%;
     border-radius: 8px 8px 0 0;
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    iframe {
+        width: 100%; /* Make videos responsive */
+        height: auto;
+    }
 }
