@@ -63,6 +63,7 @@ h1, h2, h3 {
 }
 
 .project {
+    width: 100%;
     margin-bottom: 25px;
 }
 
@@ -102,5 +103,11 @@ footer {
     aspect-ratio: 16/9; /* Maintain a 16:9 aspect ratio */
     max-width: 100%;
     border: none;
-}
+	}
+	.project iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Maintain a 16:9 aspect ratio */
+	}
 }
