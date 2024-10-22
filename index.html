@@ -17,17 +17,10 @@
         }
         header {
             text-align: center;
-            width: 100%;
-            padding: 20px;
-            background-color: #1c1c1c;
-            margin-bottom: 20px;
-        }
-        header h1, header p {
-            margin: 0;
         }
         #projects-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             width: 100%;
             padding: 20px;
@@ -39,7 +32,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
             transition: transform 0.2s;
-            height: 300px; /* Ensures all boxes are the same height */
+            height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -62,18 +55,38 @@
         .project-card a:hover {
             text-decoration: underline;
         }
-        /* Media Queries for responsive design */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            background-color: #a83227;
+            transform: scale(0.95);
+        }
         @media (max-width: 1200px) {
             #projects-container {
-                grid-template-columns: repeat(2, 1fr); /* Two items per row */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (max-width: 768px) {
             #projects-container {
-                grid-template-columns: 1fr; /* Single item per row */
+                grid-template-columns: 1fr;
             }
             .project-card {
-                height: auto; /* Adjust height for flexibility */
+                height: auto;
             }
         }
     </style>
@@ -113,8 +126,8 @@
             </section>
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Email: <a href="mailto:20kieranlewis00@gmail.com">20kieranlewis00@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/kieran-lewis-212b95167/" target="_blank">Kieran Lewis</a></p>
+                <a href="mailto:20kieranlewis00@gmail.com" class="button">Email Me</a>
+                <a href="https://www.linkedin.com/in/kieran-lewis-212b95167/" target="_blank" class="button">LinkedIn</a>
             </section>
         </main>
     </div>
@@ -124,7 +137,7 @@
     <script>
     const projectsContainer = document.querySelector('#projects-container');
 
-    fetch('assets/json/projects.json') // Use a relative path
+    fetch('assets/json/projects.json')
         .then(response => response.json())
         .then(projectData => {
             projectData.forEach(project => {
