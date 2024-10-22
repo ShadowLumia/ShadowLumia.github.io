@@ -84,6 +84,7 @@ const createProjectPage = (project) => {
                 <h3>${project.title}</h3>
                 <p>Type: ${project.type}</p>
                 <p>Status: ${project.status}</p>
+                <p>${project.description}</p>
                 <img src="${project.imageUrl}" alt="${project.title}">
                 <iframe src="${project.videoUrl}" allowfullscreen></iframe>
                 <p><a href="${project.itchUrl}">Visit the Itch.io page</a></p>

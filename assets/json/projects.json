@@ -3,27 +3,28 @@
         "title": "Curse of Jeremy the Jackal God",
         "type": "Vertical Slice",
         "status": "In Development",
+        "description": "A fixed camera local co-op survival horror game set in the catacombs of Giza.",
         "imageUrl": "path/to/image.jpg",
         "videoUrl": "https://www.youtube.com/embed/your-video-id",
-        "itchUrl": "https://shadowlumia.itch.io/curse-of-jeremy-the-jackal-god",
-        "filename": "curse_of_jeremy_the_jackal_god.html"
+        "itchUrl": "https://shadowlumia.itch.io/curse-of-jeremy-the-jackal-god"
     },
     {
         "title": "Cataclysm's Core",
         "type": "Vertical Slice",
         "status": "Completed",
+        "description": "An action-adventure game featuring procedural generation, HLSL shaders, and persistent data.",
         "imageUrl": "path/to/image2.jpg",
         "videoUrl": "https://www.youtube.com/embed/your-video-id2",
-        "itchUrl": "https://shadowlumia.itch.io/cataclysms-core",
-        "filename": "cataclysms_core.html"
+        "itchUrl": "https://shadowlumia.itch.io/cataclysms-core"
     },
     {
         "title": "Fractured Dimension",
         "type": "Vertical Slice",
         "status": "Work-in-Progress",
-        "imageUrl": "path/to/image2.jpg",
-        "videoUrl": "https://www.youtube.com/embed/your-video-id2",
-        "itchUrl": "https://shadowlumia.itch.io/fractured-dimension",
-        "filename": "fractured_dimension.html"
+        "description": "Escape a haunted hospital by hiding from monsters in this survival horror game.",
+        "imageUrl": "path/to/image3.jpg",
+        "videoUrl": "https://www.youtube.com/embed/your-video-id3",
+        "itchUrl": "https://shadowlumia.itch.io/fractured-dimension"
     }
+    // Add more projects as needed
 ]
