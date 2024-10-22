@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Curse of Jeremy the Jackal God",
+        "type": "Vertical Slice",
+        "status": "In Development",
+        "imageUrl": "path/to/image.jpg",
+        "videoUrl": "https://www.youtube.com/embed/your-video-id",
+        "itchUrl": "https://shadowlumia.itch.io/curse-of-jeremy-the-jackal-god",
+        "filename": "curse_of_jeremy_the_jackal_god.html"
+    },
+    {
+        "title": "Cataclysm's Core",
+        "type": "Vertical Slice",
+        "status": "Completed",
+        "imageUrl": "path/to/image2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/your-video-id2",
+        "itchUrl": "https://shadowlumia.itch.io/cataclysms-core",
+        "filename": "cataclysms_core.html"
+    },
+    {
+        "title": "Fractured Dimension",
+        "type": "Vertical Slice",
+        "status": "Work-in-Progress",
+        "imageUrl": "path/to/image2.jpg",
+        "videoUrl": "https://www.youtube.com/embed/your-video-id2",
+        "itchUrl": "https://shadowlumia.itch.io/fractured-dimension",
+        "filename": "fractured_dimension.html"
+    }
+]

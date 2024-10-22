@@ -4,7 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kieran Lewis - Games Programmer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+            gap: 20px;
+            width: 80%;
+            padding: 20px;
+        }
+        .project-card {
+            border: 1px solid #e74c3c;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+            transition: transform 0.2s;
+            height: 300px; /* Ensures all boxes are the same height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #e74c3c;
+        }
+        .project-card p {
+            margin: 5px 0;
+            color: #c0392b;
+        }
+        .project-card a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,79 +70,18 @@
         <main>
             <section id="about">
                 <h2>About Me</h2>
-                <p>Hi! I'm Kieran, a Games Programmer based in Liverpool. Currently, I'm diving into my second year of Games Programming at SAE Institute Liverpool. Ever since I was young, my heart has beat for horror games, especially those created with Unreal Engine. This passion was sparked by my own cherished memories of playing them.
-My journey has been all about pushing the boundaries of fear and creativity in the gaming universe. Along the way, I’ve developed a knack for crafting experiences that genuinely thrill and captivate players.<br><br> Below, you’ll find a collection of projects I’ve poured my heart into, alongside some fun personal ventures.
-I take immense pride in learning new skills and embracing challenges head-on. Whether it’s fine-tuning a game feature or diving into new technologies, my goal is always to realise the creative vision to its fullest potential. There’s something irresistible about the technical side of gaming that keeps me endlessly curious and motivated.
-Occasionally, I dabble in Web Development, like the creation of this very site. If you have any questions or just want to chat, feel free to reach out!</p>
+                <p>Hi! I'm Kieran, a Games Programmer based in Liverpool...<br><br> If you have any questions or just want to chat, feel free to reach out!</p>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
-                <div class="projects">
-                    <div class="project-container">
-                        <div class="project">
-                            <div class="video-wrapper">
-                                <a href="ShadowLumia.github.com/CoJtJG.html">
-                                <img src="Assets\CoJtJG.png" alt="CoJtJG Picture" width="560" height="315">
-                                </a>
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="project-title">Curse of Jeremy the Jackal God</div>
-                                <div class="tags">
-                                    <span>Horror</span>
-                                    <span>Unreal Engine</span>
-                                    <span>Co-op</span>
-                                </div>
-                                <div class="description">
-                                    <p>Curse of Jeremy the Jackal God is a fixed camera local co-op survival horror game set in the catacombs of the sands of Giza.</p>
-                                    <a href="https://shadowlumia.itch.io/curse-of-jeremy-the-jackal-god">Visit the Itch.io page.</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-container">
-                        <div class="project">
-                            <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="project-title">Fractured Dimension</div>
-                                <div class="tags">
-                                    <span>Horror</span>
-                                    <span>Unreal Engine</span>
-                                    <span>Survival</span>
-                                </div>
-                                <div class="description">
-                                    <p>Fractured Dimension is the first ever title I created, the focus of the game is to escape a haunted hospital that the player has been trapped inside of, the player can't fight the monsters and must hide and escape from the creatures or perish.</p>
-                                    <a href="https://shadowlumia.itch.io/fractured-dimension">Visit the Itch.io page.</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="project-container">
-    <div class="project">
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="content-wrapper">
-            <div class="project-title">Cataclysm's Core</div>
-            <div class="tags">
-                <span>Action</span>
-                <span>Adventure</span>
-                <span>Fantasy</span>
-            </div>
-            <div class="description">
-                <p>Cataclysm's Core was the first ever collaborative project I worked on. My programmer project brief instructed me to create a Procedural Generation system, create my own HLSL Shader, and finally a Save/Load system using Persistant Data. </p>
-                <a href="https://shadowlumia.itch.io/cataclysms-core">Visit the Itch.io page.</a>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
+                <div id="projects-container"></div>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
                 <ul>
                     <li>C++</li>
+                    <li>C#</li>
+                    <li>JavaScript</li>
                     <li>Unreal Engine 4 / 5</li>
                     <li>Unity Engine</li>
                 </ul>
@@ -110,5 +96,24 @@ Occasionally, I dabble in Web Development, like the creation of this very site. 
     <footer>
         <p>&copy; Kieran Lewis. All Rights Reserved.</p>
     </footer>
+    <script>
+    const projectsContainer = document.querySelector('#projects-container');
+
+    fetch('assets/json/projects.json') // Use a relative path
+        .then(response => response.json())
+        .then(projectData => {
+            projectData.forEach(project => {
+                const fileName = project.title.replace(/ /g, '_').toLowerCase() + '.html';
+                projectsContainer.innerHTML += `
+                    <div class="project-card">
+                        <h3><a href="projects/${fileName}">${project.title}</a></h3>
+                        <p>Type: ${project.type}</p>
+                        <p>Status: ${project.status}</p>
+                    </div>
+                `;
+            });
+        })
+        .catch(error => console.error('Error fetching project data:', error));
+    </script>
 </body>
 </html>

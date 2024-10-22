@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Projects</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        width: 80%;
+        padding: 20px;
+    }
+    .project-card {
+        border: 1px solid #e74c3c;
+        padding: 20px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+        transition: transform 0.2s;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+    .project-card h3 {
+        margin-top: 0;
+        color: #e74c3c;
+    }
+    .project-card p {
+        margin: 5px 0;
+        color: #c0392b;
+    }
+</style>
+</head>
+<body>
+
+<h1>My Projects</h1>
+<div id="projects"></div>
+
+<script>
+    const projectData = [
+        { title: 'The Story of a Mandalorian', type: 'Game Alpha', status: 'Pre-Development' },
+        { title: 'Toy Guns', type: 'Minecraft Mod', status: 'Free' },
+        { title: 'Better Barrels', type: 'Minecraft Mod', status: 'Free' },
+        { title: 'Ultimate Players', type: 'Website', status: 'Free' },
+        { title: 'Food Mod', type: 'Minecraft Mod', status: 'Free' },
+        { title: 'Discord Server Bot', type: 'Discord Bot', status: 'Free' }
+    ];
+
+    const createProjectCard = (project) => {
+        return `
+            <div class="project-card">
+                <h3>${project.title}</h3>
+                <p>Type: ${project.type}</p>
+                <p>Status: ${project.status}</p>
+            </div>
+        `;
+    };
+
+    const projectsContainer = document.getElementById('projects');
+    projectData.forEach(project => {
+        projectsContainer.innerHTML += createProjectCard(project);
+    });
+</script>
+
+</body>
+</html>
